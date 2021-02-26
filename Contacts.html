@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image" href="Creative Hobby.png" /> 
+<title>MY PROFILE</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img{
+    border-radius: 50%;
+}
+main{
+    z-index: 3;
+    min-height: 100vh;
+    background: linear-gradient(to right,rgb(103, 188, 245),rgb(0, 184, 159));
+}  
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+ z-index: 15;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+}
+
+li {
+  z-index: 15;
+  float: left;
+}
+
+li a {
+  z-index: 15;
+  opacity: .9;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+    z-index: 15;
+    background-color: rgb(0, 61, 61);
+    border-radius: 2rem;
+}
+.navbar{
+    z-index: 15;
+    position: relative;
+}
+.navbarstrip{
+    position: absolute;
+    z-index: 12;
+    border-radius: 2rem;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.6),rgb(6, 199, 199, 0.0));
+    min-height: 6.3vh;
+    min-width: 50%;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: linear-gradient(to right,rgb(0, 0, 0),rgb(6, 199, 199));
+    left: 0vh;  
+    width: 10vh;
+    top: 0vh;
+}
+/* .glass1{
+    position: absolute;
+    z-index: 6;
+    opacity: 0.8;
+    background: rgb(255, 255, 255);
+    border-radius: 2rem;
+    min-height: 50vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: linear-gradient(to right,rgba(255, 255, 255, 0.9),rgb(255, 255, 255, 0.9));  
+    right: 15vh;  
+    width: 20%;
+    top: 30vh;
+} */
+/* .glass2{
+    position: absolute;
+    z-index: 6;
+    opacity: 0.8;
+    background: rgba(255, 255, 255);
+    border-radius: 2rem;
+    min-height: 50vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: linear-gradient(to right,rgba(255, 255, 255, 0.9),rgb(255, 255, 255, 0.9));  
+    left: 15vh;
+    width: 20%;
+    top: 30vh;
+} */
+.glass3{
+    z-index: 6;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border-radius: 2rem;
+    min-height: 83vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: linear-gradient(to right,rgb(255, 255, 255),rgb(255, 255, 255));  
+    width: 75%;
+    top: 10vh;
+    left: 25vh;
+}
+.image1{
+    position: absolute;
+    z-index: 7;
+    width: 16vh;
+    height: 16vh;
+    top: 14vh;
+    left: 78.3%;
+    bottom: 20%;
+}
+.image2{
+    border: 8px outset rgb(3, 255, 213);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 7;
+    width: 25vh;
+    height: 25vh;
+    top: 34vh;
+    left: 44.3%;
+    bottom: 20%;
+
+}
+.image3{
+    position: absolute;
+    z-index: 7;
+    width: 30vh;
+    height: 30vh;
+    top: 19vh;
+    left: 9.5%;
+    bottom: 20%;
+}
+.circle1{
+    position: absolute;
+    z-index: 3;
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(255, 1, 99);  
+    right: 7vh;  
+    width: 30vh;
+    top: 68vh;
+}
+.circle2{
+    position: absolute;
+    z-index: 3;
+    opacity: 0.6;
+    background: rgba(79, 0, 226, 0.3);
+    border-radius: 50%;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color:rgb(30, 216, 191);  
+    right: 108vh;  
+    width: 30vh;
+    top: 65vh;
+}
+.circle3{
+    position: absolute;
+    z-index: 3;
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(238, 51, 176);  
+    left: 2vh;  
+    width: 30vh;
+    top: 12vh;
+}
+.circle4{
+    position: absolute;
+    z-index: 15;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    min-height: 10vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: whitesmoke;  
+    left: 9vh;  
+    width: 10vh;
+    top: 74vh;
+}
+.circle5{
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    min-height: 10vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(234, 236, 70);  
+    left: 115vh;  
+    width: 10vh;
+    top: 43vh;
+}
+.circle6{
+    position: absolute;
+    z-index: ;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    min-height: 10vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(0, 204, 255);  
+    right: 10vh;  
+    width: 10vh;
+    top: 15vh;
+}
+.circle7{
+    position: absolute;
+    z-index: 3;
+    background: rgb(132, 247, 247);
+    border-radius: 50%;
+    min-height: 17vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(94, 255, 234);  
+    right: 27.5vh;  
+    width: 17vh;
+    top: 20.5vh;
+}
+
+.button2 {
+  top: 500px;
+  border-radius: 4px;
+  background-color: #00ccff;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  color: black;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 50px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.quote{
+    position: absolute;
+    z-index: 15;
+    text-align: left;
+    justify-content: left;
+    top: 70px;
+    left: 86vh;
+}
+.line{
+    position: absolute;
+    z-index: 7;
+    top: 14vh;
+    left: 85vh;
+}
+.profile{
+    position: absolute;
+    z-index: 7;
+    width: 20vh;
+    height: 20vh;
+    top: 8vh;
+    left: 31.5%;
+    bottom: 20%;
+}
+.namesquare{
+    position: absolute;
+    z-index: 3;
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-right-radius: 2rem;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: rgb(255, 1, 99);  
+    right: 77vh;  
+    width: 30vh;
+    top: 0vh;
+}
+h1 {
+  text-shadow: 0 0 3px whitesmoke;
+}
+.text1{
+    position: absolute;
+    z-index: 8;
+    right: 23vh;
+    top: 38vh;
+    justify-content: center;
+    text-align: center;
+}
+.text2{
+    position: absolute;
+    z-index: 8;
+    right: 90vh;
+    top: 58vh;
+    justify-content: center;
+    text-align: center;
+}
+.text3{
+    position: absolute;
+    z-index: 8;
+    left: 23vh;
+    top: 38vh;
+    justify-content: center;
+    text-align: center;
+}
+.square1{
+    position: absolute;
+    z-index: 5;
+    background:  rgba(128, 20, 20, 0.9);
+    border-radius: 1rem;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color:rgb(128, 20, 20);  
+    left: 21vh;  
+    width: 6vh;
+    top: 66vh;
+}
+.square2{
+    position: absolute;
+    z-index: 5;
+    background: rgba(235, 3, 3, 0.9);
+    border-radius: 1rem;
+    min-height: 30vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color:rgb(233, 229, 10);  
+    right: 22vh;  
+    width: 6vh;
+    top: 8vh;
+}
+.square3{
+    position: absolute;
+    z-index: 5;
+    background: rgba(128, 20, 20, 0.9);
+    border-radius: 1rem;
+    min-height: 6vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color:rgb(128, 20, 20);  
+    left: 21vh;  
+    width: 30vh;
+    top: 91vh;
+}.square4{
+    position: absolute;
+    z-index: 5;
+    background: rgba(128, 20, 20, 0.9);
+    border-radius: 1rem;
+    min-height: 6vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color:rgb(233, 229, 10);  
+    right: 22vh;  
+    width: 30vh;
+    top:6vh;
+}
+.heading{
+    position: absolute;
+    z-index: 8;
+    left: 38vh;
+    top: 15vh;
+    justify-content: center;
+    text-align: center;
+}
+.careerobj{
+    position: absolute;
+    top: 35vh;
+    z-index: 8;
+    left: 40vh;
+}
+.icon1{
+
+    position: absolute;
+    top: 28.5vh;
+    left: 130vh;
+    border-radius: 50%;
+    height: 14vh;
+    width: 14vh;
+
+    
+}
+.icon2{
+
+    position: absolute;
+    top: 30vh;
+    left: 110vh;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+
+    
+}
+.icon3{
+
+    position: absolute;
+    top: 30vh;
+    left: 90vh;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+
+    
+}
+.quote{
+    position: absolute;
+    top:80vh;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(104, 104, 104);
+    font-size: 20px;
+    left: 65vh;
+}
+
+/* .glass1 {
+  margin:20px;
+  padding: 3px;
+  outline:2px solid #DDD;
+  border:#a1a1a1;
+  float:left;
+	-webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+}
+
+.glass1:hover {
+	cursor:pointer;
+    margin-top: 5px;
+} */
+/* .text1{
+    display: flex;
+    background: black;
+    border-radius: 2rem;
+    min-height: 50vh;
+    border: 1px outset linear-gradient(to right,rgb(6, 199, 199),rgb(0, 0, 0));
+    background-color: whitesmoke; 
+    width: 0%;
+    top: 30vh;
+    left: 82vh;
+} */
+
+</style>
+</head>
+<body>
+    <main>
+        <div class="glass1">
+
+        </div>
+        <div class="glass2">
+
+        </div>
+        <div class="glass3">
+            <div class="icon1">
+                <a href="https://www.twitter.com/10ansh01/"><img src="Twitter.png" style="width:100%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="icon2">
+                <a href="https://www.linkedin.com/in/ansh-munjal-bbb832169"><img src="Linkedin.png" style="width:100%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="icon3">
+                <a href="https://www.instagram.com/10ansh01/"><img src="instagram.png" style="width:100%"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+
+        </div>
+        <!-- <div class="image1">
+            <img src="Hobbies.png" width="100%">
+            
+        </div>
+        <div class="text1">
+            <h1 style = "font-family:candara;font-style:italic;">Hobbies</h1>
+            <p style = "font-family:candara;font-size:20px;font-style:italic;"></br>My interests,</br> My passion</br>and activities </br>I do  regularly </br>in my time </br>for pleasure.</br> </p>
+            <button class="button2">
+                <span>
+                <a style="text-decoration:none" href="http://127.0.0.1:5500/Hobbies.html" class="btn">More</a>
+                </span>
+                </button>
+
+        </div> -->
+        <!-- <div class="image2">
+            <img src="anshpic.jpeg" width="100%">
+
+        </div> -->
+        <!-- <div class="text2">
+            <h1 style = "font-family:candara;font-style:italic;">Skills</h1>
+            <p style = "font-family:candara;font-size:20px;font-style:italic;"> </br>Functional and </br>Non-functional, </br>What I have and </br>What I wish to</br> have in future. </br></p>
+            <button class="button2">
+            <span>
+            <a style="text-decoration:none" href="http://127.0.0.1:5500/Skills.html" class="btn">More</a>
+            </span>
+            </button> -->
+
+        </div>
+        <!-- <div class="image3">
+            <img src="About me.png" width="100%">
+           
+        </div>
+        <div class="text3">
+            <h1 style = "font-family:candara;font-style:italic;">About </h1>
+            <p style = "font-family:candara;font-size:20px;font-style:italic;"></br>Miscellaneous</br> information about </br>me,that you</br> might find </br>interesting.</br> </br></p>
+            <button class="button2">
+                <span>
+                <a style="text-decoration:none" color="black" href="http://127.0.0.1:5500/About%20me.html" class="btn">More</a>
+                </span>
+                </button>
+
+        </div> -->
+        <div class="navbar">
+        <ul>
+            <li><a class="active" href="http://127.0.0.1:5500/index.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/Personal.html">Profile</a></li>
+            <li><a href="http://127.0.0.1:5500/Education.html">Education</a></li>
+            <li><a href="http://127.0.0.1:5500/Projects.html">Projects & Workshops</a></li>
+          </ul>
+        </div>
+        <!-- <div class="quote">
+            <h1 style="color: black;font-family: sans-serif;font-size: 40px;">Ansh Munjal</h1>
+            <p style="font-family:candara;font-size:20px;font-style:italic;color: whitesmoke;text-shadow: 0 10px 10px black;"> </br>B.Tech (Electronics and Communications)</p>
+        </div>
+        <div class="line">
+            <h2 style="color: black;">_________________________</h2>
+        </div> -->
+
+        <!-- <div class="profile">
+            <img src="anshpic.jpeg" width="100%">
+        </div> -->
+
+    </main>
+   
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+    <div class="circle6"></div>
+    <div class="circle7"></div>
+    <div class="navbarstrip"></div>
+    <div class="namesquare"></div>
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
+    <div class="heading">
+        <p style = "font-family:candara;font-size:54px;font-style:italic;color: rgb(1, 100, 100);">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+            Contacts&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<hr style="margin: 40px 0px;
+            border-color: #727878;
+            opacity: 0.2;border-top: 1px solid #eee;"></p>
+    </div>
+    <div class="careerobj">
+        <p style="font-family:candara;font-weight: bold;font-size: 25px;"></p>
+        <i class="fa fa-mobile-phone" style="font-size:30px;color:rgb(0, 0, 0)"> &nbsp&nbsp&nbsp+91-9530447267</i></br></br></br>
+        <i class="fa fa-envelope" style="font-size:24px;color:rgb(0, 0, 0)">&nbsp&nbsp&nbsp&nbspanshmunjal@rightpoint.com</i></br></br></br>
+        <i class="fa fa-map-marker" style="font-size:24px;color:rgb(0, 0, 0)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHanumangarh, Rajasthan</i>
+    </div>
+
+    <div class="quote"> "Networking is an investment in your business." </br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp- Diane Helbig</div>
+</body>
+</html>
